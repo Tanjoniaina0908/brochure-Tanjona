@@ -88,8 +88,6 @@ p{
     display: flex;
     flex-direction: row;
     gap: 20px;
-    0%{
-        transform: translate: (0);
-    }
+    
 }
 
