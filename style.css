@@ -90,4 +90,9 @@ p{
     gap: 20px;
     
 }
+@media screen (max-width: 339px;){
+    .part2{
+        font-size: 14px;
+    }
+}
 
