@@ -90,7 +90,19 @@ p{
     gap: 20px;
     
 }
-@media screen (max-width: 339px;){
+
+@media (max-width: 339px){
+    .part2{
+        font-size: 14px;
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+}
+@media (max-width: 1200px){
     .part2{
         font-size: 14px;
     }
