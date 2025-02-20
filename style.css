@@ -19,6 +19,11 @@
     vertical-align: bottom;
     font-size: 80px;
 }
+.paragraphe{
+    display: flex;
+    
+    flex-direction: row;
+}
 em::first-letter{
     font-size: 4em;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -36,9 +41,8 @@ h2{
     font-size: 40px;
 }
 h1{
-    color: rgb(83, 120, 153);
+    color: rgb(63, 107, 230);
     font-size: 30px;
-    text-align: center;
 
 }
 h3{
@@ -58,25 +62,89 @@ h3{
 
 }
 .part2{
-    right: 300px;
+    height: 900px;
+    width: 900px; 
+    background-size: contain; 
+    background-repeat: no-repeat;  
+    background-image: url(./IMG_20221225_134201.jpg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 60px;
+
+}
+}
+.part2{
+    /* right: 300px;
     background-image: url(./phone\ portable.png) ;
     background-repeat: repeat-y;
     background-size: contain;
     height: 800px;
     width: 800px;
+    border-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px; */
 }
+.texte1{
+    gap: 10px;
+    
+}
+/* .profil{
+    position: absolute;
+    top: 50px;
+    right: 160px;
+    width: 500px;
+    height: 700px;
+    
+} */
 .coordonnée{
     
     flex-direction: column;
     flex-direction: row;
-    text-align: center;
+    
+}
+.tel{
+    gap: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+}
+.phon{
+    gap: 16px;
+}
+.email{
+    gap: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+}
+.mail{
+    gap: 16px;
+}
+.domicile{
+    gap: 20px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+}
+.gps{
+    gap: 20px;
 }
 p{
-    color: aqua;
+    color: rgb(57, 126, 126);
     margin-right: 10%;
+    font-size: 30px;
 }
 .profil{
-    border-radius: 100%;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
 }
 
 .tel{
@@ -107,4 +175,9 @@ p{
         font-size: 14px;
     }
 }
-
+@media (max-width: 279px){
+    .body{
+        display: flex;
+        flex-direction: row;
+    }
+}
