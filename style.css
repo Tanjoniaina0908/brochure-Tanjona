@@ -63,7 +63,7 @@ h3{
 }
 .part2{
     height: 900px;
-    width: 900px; 
+    width: 100%; 
     background-size: contain; 
     background-repeat: no-repeat;  
     background-image: url(./IMG_20221225_134201.jpg);
@@ -179,5 +179,10 @@ p{
     .body{
         display: flex;
         flex-direction: row;
+    }
+}
+@media(max-width: ){
+    .part2{
+        width: 100%;
     }
 }
