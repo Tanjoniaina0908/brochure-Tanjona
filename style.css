@@ -1,12 +1,14 @@
 .body{
-    display: flex;
+    display: flex;                                              
     background-image: url(./font.webp);
     background-attachment: fixed;
     background-position: center;
+    background-size: cover;
     padding: 0%;
     margin: 0%;
     text-decoration: aliceblue;
     gap: 80px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .Editeur{
     display: flex;
@@ -31,23 +33,28 @@ em::first-letter{
     padding: 10px;
 }
 .metier{
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 100px;
     gap: 20px;
 }
+
+h1{
+    color: rgb(63, 107, 230);
+    font-size: 30px;
+    margin: 0;
+
+}
+
 h2{
     color: aliceblue;
     font-style: italic;
     font-size: 40px;
 }
-h1{
-    color: rgb(63, 107, 230);
-    font-size: 30px;
 
-}
 h3{
    color: aquamarine ; 
+   margin: 0;
 }
+
 .lettrine{
     
     font-weight: bold;
@@ -56,6 +63,7 @@ h3{
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
 .part1{
     left: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -63,58 +71,91 @@ h3{
 }
 .part2{
     height: 900px;
-    width: 100%; 
-    background-size: contain; 
-    background-repeat: no-repeat;  
-    background-image: url(./IMG_20221225_134201.jpg);
+    width: 100%;  
+    background-image: url(./image-phone.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
     background-position: center;
+    padding: 50px 120px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     border-radius: 60px;
+    position: relative;
 
 }
-}
-.part2{
-    /* right: 300px;
-    background-image: url(./phone\ portable.png) ;
-    background-repeat: repeat-y;
-    background-size: contain;
-    height: 800px;
-    width: 800px;
-    border-radius: 60px;
-    border-top-right-radius: 60px;
-    border-bottom-right-radius: 60px; */
-}
-.texte1{
-    gap: 10px;
-    
-}
-/* .profil{
+
+.part2::before{
+    content:"";
     position: absolute;
-    top: 50px;
-    right: 160px;
-    width: 500px;
-    height: 700px;
+    top: 0; 
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: linear-gradient(to right,rgba(0, 0, 0, 0.4),transparent);
+    z-index: 0;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 60px;
+    pointer-events: none;
+}
+
+.contenu {
+    max-width: 800px;
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.texte1{
+    position: relative;
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     
-} */
+}
+
 .coordonnée{
     
     flex-direction: column;
     flex-direction: row;
     
 }
-.tel{
-    gap: 20px;
-    font-size: 16px;
+
+.coordonnée h1{
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.ligne-info {
     display: flex;
-    flex-direction: column;
-    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
-.phon{
-    gap: 16px;
+
+.icone {
+    width: 30px;
+    height: 30px;
 }
+
+.texte-info p,
+.texte-info a,
+.texte-info h3 {
+    margin: 0;
+    color:white;
+    font-size: 18px;
+    text-align: left;
+}
+
+p {
+    color: rgb(57, 126, 126);
+    margin-right: 10%;
+    font-size: 30px;
+}
+
 .email{
     gap: 20px;
     font-size: 16px;
@@ -122,9 +163,7 @@ h3{
     flex-direction: column;
     flex-direction: row;
 }
-.mail{
-    gap: 16px;
-}
+
 .domicile{
     gap: 20px;
     font-size: 16px;
@@ -132,57 +171,117 @@ h3{
     flex-direction: column;
     flex-direction: row;
 }
-.gps{
-    gap: 20px;
-}
-p{
-    color: rgb(57, 126, 126);
-    margin-right: 10%;
-    font-size: 30px;
-}
+
 .profil{
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    border-bottom-right-radius: 60px;
-    border-bottom-left-radius: 60px;
+    border-radius: 60px;
 }
 
-.tel{
-    display: flex;
-    flex-direction: column;
-    flex-direction: row;
-}
 .social{
     display: flex;
     flex-direction: row;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     
 }
 
-@media (max-width: 339px){
+/*-----------MEDIA QUERIES RESPONSIVES-------------*/
+
+/* Tablettes */
+@media (max-width: 992px){
     .part2{
-        font-size: 14px;
+        height: auto;
+        padding: 30px;
     }
-    .social{
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        
+
+    .texte1{
+        gap: 15px;
+    }
+
+    .coordonnée h1 {
+        font-size: 22px;
+    }
+
+    .texte-info p,
+    .texte-info a,
+    .texte-info h3 {
+        font-size: 16px;
+    }
+
+    .icone {
+        width: 25px;
+        height: 25px;
+    }
+
+    .social img{
+        width:25px;
+        height: 25px;
     }
 }
-@media (max-width: 1200px){
+
+/*Mobiles*/
+@media (max-width: 600px){
+    .body {
+        flex-direction: column;
+        gap: 40px;
+    }
+
     .part2{
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .texte1 {
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .coordonnée h1 {
+        font-size: 18px;
+    }
+
+    .texte-info p,
+    .texte-info a,
+    .texte-info h3 {
         font-size: 14px;
     }
+
+    .icone {
+        width: 20px;
+        height: 20px;
+    }
+
+    .social {
+        gap: 10px;
+    }
+
+    .social img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .orientation {
+        font-size: 40px;
+    }
+
+    .metier {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
 }
-@media (max-width: 279px){
+
+@media (max-width: 290px) {
     .body{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 }
-@media(max-width: ){
-    .part2{
-        width: 100%;
-    }
-}
+
